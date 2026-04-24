@@ -60,6 +60,31 @@ This package installs:
 
 ---
 
+## Screenshots
+
+### Dashboard
+![Dashboard](assets/screenshots/01.png)
+
+### Cache Rules
+![Cache Rules](assets/screenshots/02.png)
+
+### Cache Diagnostics
+![Diagnostics](assets/screenshots/03.png)
+
+### Cache Preview
+![Preview](assets/screenshots/04.png)
+
+### Cloudflare Tools
+![Cloudflare](assets/screenshots/05.png)
+
+### GA4 Realtime
+![GA4](assets/screenshots/06.png)
+
+### Settings
+![Settings](assets/screenshots/07.png)
+
+---
+
 ## Installation
 
 1. Download latest release package
