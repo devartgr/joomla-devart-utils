@@ -4,7 +4,7 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.2-orange)
+![Release](https://img.shields.io/badge/Version-1.2.3-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
