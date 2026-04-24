@@ -111,7 +111,7 @@ Use a Google service account JSON file with access to your GA4 property.
 
 ## Current Stable Version
 
-**1.2.2**
+**1.2.3**
 
 ---
 
