@@ -4,7 +4,7 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.4-orange)
+![Release](https://img.shields.io/badge/Version-1.2.5-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -17,6 +17,7 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 - Purge specific Cloudflare URL
 - Secure Connect / Disconnect workflow
 - Cloudflare analytics support
+- Cloudflare Cache Rules visibility
 - Multi-site safe configuration handling
 
 ### Google Analytics 4
@@ -113,16 +114,16 @@ Use a Google service account JSON file with access to your GA4 property.
 
 ## Current Stable Version
 
-**1.2.4**
+**1.2.5**
 
 ---
 
-## Changelog 1.2.4
+## Changelog 1.2.5
 
-- Fixed Joomla Page Cache plugin detection on Joomla 6
-- Fixed Cloudflare settings being overwritten by unrelated saves
-- Improved Cloudflare Connect workflow using stored encrypted token
-- Improved multi-site reliability and production stability
+- Fixed Cloudflare Cache Rules panel returning empty results
+- Restored correct Cloudflare Cache Rules endpoint compatibility
+- Improved Cloudflare diagnostics reliability
+- Maintained all previous security hardening improvements
 
 ---
 
