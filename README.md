@@ -4,7 +4,7 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.5-orange)
+![Release](https://img.shields.io/badge/Version-1.2.6-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -63,6 +63,19 @@ This package installs:
 
 ---
 
+## Stability Improvements in 1.2.6
+
+- Fixed Settings save inconsistencies introduced after recent hardening changes
+- Fixed stale Yes / No toggle values after saving settings
+- Fixed Cloudflare connection state mismatches on some installations
+- Fixed System Check reporting missing token while encrypted credentials existed
+- Fixed debug headers not always reflecting current saved settings
+- Added hard exclusion for `/administrator` paths in the DevArt Cache plugin
+- Improved parameter loading reliability across hardened and migrated sites
+- TTL labels now clearly indicate values are measured in seconds
+
+---
+
 ## Screenshots
 
 ### Dashboard
@@ -106,6 +119,16 @@ This package installs:
 
 ---
 
+## Recommended Cloudflare Administrator Rule
+
+For Joomla administrator areas, legacy Cloudflare Page Rules may still be recommended:
+
+- `/administrator/*`
+- Bypass Cache
+- Disable Performance
+
+---
+
 ## Google Analytics Setup
 
 Use a Google service account JSON file with access to your GA4 property.
@@ -114,16 +137,18 @@ Use a Google service account JSON file with access to your GA4 property.
 
 ## Current Stable Version
 
-**1.2.5**
+**1.2.6**
 
 ---
 
-## Changelog 1.2.5
+## Changelog 1.2.6
 
-- Fixed Cloudflare Cache Rules panel returning empty results
-- Restored correct Cloudflare Cache Rules endpoint compatibility
-- Improved Cloudflare diagnostics reliability
-- Maintained all previous security hardening improvements
+- Fixed Settings save / stale toggle state issues
+- Fixed Cloudflare token status inconsistencies
+- Fixed debug header state reliability
+- Added administrator hard exclusion in cache plugin
+- Improved parameter loading consistency
+- Improved TTL clarity (seconds)
 
 ---
 
