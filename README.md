@@ -9,6 +9,13 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 
 ---
 
+## Official Documentation
+
+📘 **User Manual (PDF)**  
+[Download DevArt Utils Manual](docs/DevArt-Utils-Manual-v1.0.pdf)
+
+---
+
 ## Features
 
 ### Cloudflare Tools
@@ -103,11 +110,12 @@ This package installs:
 
 ## Installation
 
-1. Download latest release package
+1. Download the latest release package
 2. Open Joomla Administrator
-3. Extensions → Install
-4. Upload package zip
-5. Configure DevArt Utils
+3. Go to **System → Extensions → Install**
+4. Upload the package zip file
+5. Open **Components → DevArt Utils**
+6. Configure your preferred settings
 
 ---
 
@@ -121,7 +129,7 @@ This package installs:
 
 ## Recommended Cloudflare Administrator Rule
 
-For Joomla administrator areas, legacy Cloudflare Page Rules may still be recommended:
+For Joomla administrator areas, legacy Cloudflare Page Rules may still be useful:
 
 - `/administrator/*`
 - Bypass Cache
@@ -132,6 +140,11 @@ For Joomla administrator areas, legacy Cloudflare Page Rules may still be recomm
 ## Google Analytics Setup
 
 Use a Google service account JSON file with access to your GA4 property.
+
+Then enter:
+
+- Numeric GA4 Property ID
+- Upload JSON credentials file
 
 ---
 
@@ -154,7 +167,7 @@ Use a Google service account JSON file with access to your GA4 property.
 
 ## Author
 
-Kostas Stathopoulos  
+**Kostas Stathopoulos**  
 DevArt
 
 ---
