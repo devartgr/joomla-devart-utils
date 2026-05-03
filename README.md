@@ -1,10 +1,10 @@
 # DevArt Utils for Joomla 6
 
-Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 real-time insights, cache diagnostics, and productivity tools.
+Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 real-time insights, cache diagnostics, and performance tools for high-traffic websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.6-orange)
+![Release](https://img.shields.io/badge/Version-1.2.7-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -27,12 +27,17 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 - Cloudflare Cache Rules visibility
 - Multi-site safe configuration handling
 
+---
+
 ### Google Analytics 4
 - Real-time visitor dashboard
 - Property integration
 - Secure credential storage
 
+---
+
 ### Joomla Tools
+- Deep Joomla cache cleaning (all cache layers)
 - Joomla Page Cache detection
 - Cache diagnostics
 - Administrator quick actions
@@ -70,16 +75,28 @@ This package installs:
 
 ---
 
-## Stability Improvements in 1.2.6
+## 🚀 New in 1.2.7
 
-- Fixed Settings save inconsistencies introduced after recent hardening changes
-- Fixed stale Yes / No toggle values after saving settings
-- Fixed Cloudflare connection state mismatches on some installations
-- Fixed System Check reporting missing token while encrypted credentials existed
-- Fixed debug headers not always reflecting current saved settings
-- Added hard exclusion for `/administrator` paths in the DevArt Cache plugin
-- Improved parameter loading reliability across hardened and migrated sites
-- TTL labels now clearly indicate values are measured in seconds
+### Deep Cache Fix (Critical)
+- Fully clears Joomla cache (all cache groups)
+- Fixes cases where frontend content did not update
+- Handles Page Cache / full HTML cache properly
+- Ensures changes appear immediately without manual intervention
+
+---
+
+### Dashboard Improvements
+- Added top banner layout
+- Improved layout structure and usability
+- Notes section repositioned
+- DevArt branding moved to bottom
+
+---
+
+### Stability Improvements
+- More reliable cache behavior across servers
+- Eliminates inconsistent cache clearing cases
+- Better performance under high load
 
 ---
 
@@ -129,7 +146,7 @@ This package installs:
 
 ## Recommended Cloudflare Administrator Rule
 
-For Joomla administrator areas, legacy Cloudflare Page Rules may still be useful:
+For Joomla administrator areas:
 
 - `/administrator/*`
 - Bypass Cache
@@ -150,18 +167,18 @@ Then enter:
 
 ## Current Stable Version
 
-**1.2.6**
+**1.2.7**
 
 ---
 
-## Changelog 1.2.6
+## Changelog 1.2.7
 
-- Fixed Settings save / stale toggle state issues
-- Fixed Cloudflare token status inconsistencies
-- Fixed debug header state reliability
-- Added administrator hard exclusion in cache plugin
-- Improved parameter loading consistency
-- Improved TTL clarity (seconds)
+- Implemented deep Joomla cache cleaning (all cache layers)
+- Fixed incomplete cache clearing issue affecting frontend updates
+- Improved reliability across multiple installations
+- Dashboard layout redesign with banner and improved structure
+- Fixed packaging structure inconsistencies
+- Prepared groundwork for logging and fallback mechanisms
 
 ---
 
