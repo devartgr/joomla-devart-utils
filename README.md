@@ -1,4 +1,4 @@
-# DevArt Utils for Joomla
+# DevArt Utils for Joomla 6
 
 Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 real-time insights, cache diagnostics, and productivity tools.
 
