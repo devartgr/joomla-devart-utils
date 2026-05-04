@@ -4,7 +4,7 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.7-orange)
+![Release](https://img.shields.io/badge/Version-1.2.9-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -75,7 +75,20 @@ This package installs:
 
 ---
 
-## 🚀 New in 1.2.7
+## 🚀 New in 1.2.9
+
+### JED Compliance & Licensing
+- Added GPL license declarations in all XML manifest files
+- Added GPL license headers in all PHP files
+- Ensured full compatibility with Joomla Extensions Directory requirements
+
+### Maintenance
+- Improved package consistency and structure
+- Prepared extension for official JED submission
+
+---
+
+## Previous Highlights (1.2.7)
 
 ### Deep Cache Fix (Critical)
 - Fully clears Joomla cache (all cache groups)
@@ -83,15 +96,11 @@ This package installs:
 - Handles Page Cache / full HTML cache properly
 - Ensures changes appear immediately without manual intervention
 
----
-
 ### Dashboard Improvements
 - Added top banner layout
 - Improved layout structure and usability
 - Notes section repositioned
 - DevArt branding moved to bottom
-
----
 
 ### Stability Improvements
 - More reliable cache behavior across servers
@@ -138,8 +147,8 @@ This package installs:
 
 ## Cloudflare Recommended Token Permissions
 
-- Zone: Read
-- Cache Purge: Edit
+- Zone: Read  
+- Cache Purge: Edit  
 - Zone Analytics: Read (optional)
 
 ---
@@ -167,18 +176,7 @@ Then enter:
 
 ## Current Stable Version
 
-**1.2.7**
-
----
-
-## Changelog 1.2.7
-
-- Implemented deep Joomla cache cleaning (all cache layers)
-- Fixed incomplete cache clearing issue affecting frontend updates
-- Improved reliability across multiple installations
-- Dashboard layout redesign with banner and improved structure
-- Fixed packaging structure inconsistencies
-- Prepared groundwork for logging and fallback mechanisms
+**1.2.9**
 
 ---
 
@@ -191,4 +189,4 @@ DevArt
 
 ## License
 
-GPL v3
+GNU General Public License v3 or later
