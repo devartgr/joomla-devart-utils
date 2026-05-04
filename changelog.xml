@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
+        <version>1.2.8</version>
+
+        <change>
+            <item>Moved the Joomla update server feed to GitHub for more reliable extension updates.</item>
+            <item>Updated package metadata and manifests to use the GitHub-based update XML.</item>
+            <item>Prepared future DevArt Utils releases to be delivered directly from GitHub Releases.</item>
+        </change>
+
+        <security>
+            <item>No security fixes.</item>
+        </security>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
+        <version>1.2.7</version>
+
+        <fix>
+            <item>Fixed incomplete Joomla cache clearing that caused frontend content to not update immediately.</item>
+            <item>Fixed DevArt Clean Cache not clearing all cache groups consistently across installations.</item>
+            <item>Fixed cases where Page Cache / full HTML cache remained active after purge actions.</item>
+        </fix>
+
+        <change>
+            <item>Implemented deep Joomla cache cleaning covering all cache layers and cache groups.</item>
+            <item>Improved cache clearing reliability for high-traffic and multi-site environments.</item>
+            <item>Enhanced dashboard layout with top banner and improved structure.</item>
+            <item>Reorganized dashboard sections for better usability and clarity.</item>
+            <item>Improved internal package structure for consistent upgrades.</item>
+        </change>
+
+        <security>
+            <item>Maintained all previous credential encryption and hardening protections.</item>
+            <item>No new security vulnerabilities introduced.</item>
+        </security>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
+        <version>1.2.6</version>
+
+        <fix>
+            <item>Fixed administrator Settings save inconsistencies introduced after recent security hardening changes.</item>
+            <item>Fixed stale Yes / No toggle states being displayed after saving component settings.</item>
+            <item>Fixed Cloudflare connection status showing incorrect values on some installations.</item>
+            <item>Fixed System Check reporting Cloudflare token as missing while encrypted credentials existed.</item>
+            <item>Fixed debug headers state not always reflecting the currently saved configuration.</item>
+            <item>Fixed administrator cache conflicts by enforcing hard exclusion for /administrator paths in the DevArt Cache plugin.</item>
+        </fix>
+
+        <change>
+            <item>Reworked internal parameter loading to improve consistency across Settings, Cloudflare, Diagnostics and plugins.</item>
+            <item>Improved reliability of configuration reads on hardened, migrated and multi-site Joomla installations.</item>
+            <item>Improved administrator UX by ensuring saved values are reflected immediately after save actions.</item>
+            <item>Updated TTL labels and descriptions to clearly indicate values are measured in seconds.</item>
+        </change>
+
+        <security>
+            <item>Maintained all previous credential encryption and hardening protections.</item>
+            <item>No new security vulnerabilities introduced.</item>
+        </security>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
+        <version>1.2.5</version>
+
+        <fix>
+            <item>Fixed Cloudflare Cache Rules panel returning empty results after recent security hardening changes.</item>
+            <item>Fixed Cloudflare Cache Rules retrieval by restoring the correct Cloudflare cache settings endpoint.</item>
+            <item>Fixed Cloudflare rules visibility regression affecting previously working installations.</item>
+        </fix>
+
+        <change>
+            <item>Maintained all previous security improvements while restoring full Cloudflare Cache Rules compatibility.</item>
+            <item>Improved Cloudflare diagnostics reliability across existing and fresh installations.</item>
+        </change>
+
+        <security>
+            <item>No new security fixes. Previous credential encryption and hardening remain in effect.</item>
+        </security>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
+        <version>1.2.4</version>
+
+        <fix>
+            <item>Fixed Joomla Page Cache plugin detection on Joomla 6 installations.</item>
+            <item>Fixed Cloudflare Zone Domain and Purge Scope Host values being overwritten by unrelated Settings saves.</item>
+            <item>Fixed Cloudflare configuration inconsistencies affecting some multi-site and migrated installations.</item>
+            <item>Fixed stale administrator form state after Cloudflare Connect / Disconnect actions.</item>
+        </fix>
+
+        <change>
+            <item>Improved Cloudflare Connect workflow to reuse the stored encrypted token when updating zone or purge host values.</item>
+            <item>Improved cross-site reliability for fresh installations and existing production sites.</item>
+            <item>Improved overall stability of administrator Settings detection logic.</item>
+        </change>
+
+        <security>
+            <item>No new security fixes. Previous credential encryption and hardening remain in effect.</item>
+        </security>
+    </changelog>
+
+</changelogs>
