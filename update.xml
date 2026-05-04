@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<updates>
+    <update>
+        <name>DevArt Utils</name>
+        <description>Advanced administrator toolkit for Joomla 6</description>
+        <element>pkg_devartutils</element>
+        <type>package</type>
+        <version>1.2.7</version>
+        <infourl title="DevArt Utils">
+            https://github.com/devartgr/joomla-devart-utils
+        </infourl>
+        <changelogurl>
+            https://raw.githubusercontent.com/devartgr/joomla-devart-utils/main/changelog.xml
+        </changelogurl>
+        <downloads>
+            <downloadurl type="full" format="zip">
+                https://github.com/devartgr/joomla-devart-utils/releases/download/v1.2.7/pkg_devartutils_v1.2.7.zip
+            </downloadurl>
+        </downloads>
+        <targetplatform name="joomla" version="6.*" />
+        <php_minimum>8.1</php_minimum>
+        <sha256>545bbe5af1999773a2f551ae6bb7c1f10faee1a10b1f05354fbeb923d12f4e26</sha256>
+    </update>
+</updates>
