@@ -4,6 +4,23 @@
     <changelog>
         <element>pkg_devartutils</element>
         <type>package</type>
+        <version>1.2.9</version>
+
+        <security>
+            <item>Added GPL license declarations in all XML manifest files.</item>
+            <item>Added GPL license headers in all PHP files.</item>
+            <item>Ensured full compliance with Joomla Extensions Directory (JED) requirements.</item>
+        </security>
+
+        <change>
+            <item>Improved package structure and consistency for distribution.</item>
+            <item>Prepared extension for official Joomla Extensions Directory submission.</item>
+        </change>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
         <version>1.2.8</version>
 
         <change>
