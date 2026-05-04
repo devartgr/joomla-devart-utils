@@ -5,7 +5,7 @@
         <description>Advanced administrator toolkit for Joomla 6</description>
         <element>pkg_devartutils</element>
         <type>package</type>
-        <version>1.2.7</version>
+        <version>1.2.8</version>
         <infourl title="DevArt Utils">
             https://github.com/devartgr/joomla-devart-utils
         </infourl>
@@ -14,7 +14,7 @@
         </changelogurl>
         <downloads>
             <downloadurl type="full" format="zip">
-                https://github.com/devartgr/joomla-devart-utils/releases/download/v1.2.7/pkg_devartutils_v1.2.7.zip
+                https://github.com/devartgr/joomla-devart-utils/releases/download/v1.2.8/pkg_devartutils_v1.2.8.zip
             </downloadurl>
         </downloads>
         <targetplatform name="joomla" version="6.*" />
