@@ -4,7 +4,7 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.1%2B-green)
-![Release](https://img.shields.io/badge/Version-1.2.9-orange)
+![Release](https://img.shields.io/badge/Version-1.2.10-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -40,9 +40,18 @@ Advanced administrator toolkit for Joomla 6 with Cloudflare cache control, GA4 r
 - Deep Joomla cache cleaning (all cache layers)
 - Joomla Page Cache detection
 - Cache diagnostics
+- Cache preview tools
 - Administrator quick actions
 - Cache rules support
 - Performance utilities
+
+---
+
+### Performance Optimizations
+- Optimized cache rule matching system
+- Database indexing for faster rule lookups
+- Reduced overhead for high-traffic environments
+- Prepared groundwork for future rule caching optimizations
 
 ---
 
@@ -72,40 +81,47 @@ This package installs:
 - ACL checks for privileged actions
 - Safe API request handling
 - Clean uninstall / reinstall support
+- GPL-compliant package and source structure
 
 ---
 
-## 🚀 New in 1.2.9
+## 🚀 New in 1.2.10
 
-### JED Compliance & Licensing
-- Added GPL license declarations in all XML manifest files
-- Added GPL license headers in all PHP files
-- Ensured full compatibility with Joomla Extensions Directory requirements
+### Administrator UI Improvements
+- Added visual section headers across administrator pages
+- Improved submenu page presentation and visual consistency
+- Improved layout organization across Cache Rules, Diagnostics, Preview, Cloudflare and Settings pages
+- Added Disclaimer / Limitation of Liability section in Settings
 
-### Maintenance
-- Improved package consistency and structure
-- Prepared extension for official JED submission
+### Performance Improvements
+- Added optimized database index for cache rules matching
+- Improved scalability for large rule sets and high-traffic websites
+- Reduced future overhead for cache rule processing
+
+### Stability & Packaging
+- Improved installer upgrade handling
+- Improved package media asset handling
+- Improved compatibility across Plesk and Virtualmin environments
 
 ---
 
-## Previous Highlights (1.2.7)
+## Previous Highlights
 
-### Deep Cache Fix (Critical)
+### 1.2.9 — JED Compliance & Licensing
+- Added GPL license declarations in XML manifests
+- Added GPL license headers in PHP files
+- Prepared extension for Joomla Extensions Directory submission
+
+### 1.2.8 — GitHub Update System
+- Moved Joomla update server feed to GitHub
+- Added GitHub Releases integration
+- Improved update reliability behind Cloudflare
+
+### 1.2.7 — Deep Cache Fix
 - Fully clears Joomla cache (all cache groups)
-- Fixes cases where frontend content did not update
+- Fixes stale frontend content after updates
 - Handles Page Cache / full HTML cache properly
-- Ensures changes appear immediately without manual intervention
-
-### Dashboard Improvements
-- Added top banner layout
-- Improved layout structure and usability
-- Notes section repositioned
-- DevArt branding moved to bottom
-
-### Stability Improvements
-- More reliable cache behavior across servers
-- Eliminates inconsistent cache clearing cases
-- Better performance under high load
+- Improves cache reliability for production sites
 
 ---
 
@@ -147,9 +163,10 @@ This package installs:
 
 ## Cloudflare Recommended Token Permissions
 
-- Zone: Read  
-- Cache Purge: Edit  
+- Zone: Read
+- Cache Purge: Edit
 - Zone Analytics: Read (optional)
+- Cache Rules: Read (optional)
 
 ---
 
@@ -176,7 +193,7 @@ Then enter:
 
 ## Current Stable Version
 
-**1.2.9**
+**1.2.10**
 
 ---
 
@@ -194,12 +211,11 @@ GNU General Public License v3 or later
 ---
 
 ## Disclaimer / Limitation of Liability
+
 This software is provided "as is", without warranty of any kind.
-DevArt shall not be held liable for any damages, data loss, downtime,
-security issues, or other problems resulting from the use or misuse
-of this software.
-Users are responsible for testing the software in their own environment
-and maintaining proper backups before installation or upgrades.
+
+DevArt shall not be held liable for any damages, data loss, downtime, security issues, or other problems resulting from the use or misuse of this software.
+
+Users are responsible for testing the software in their own environment and maintaining proper backups before installation or upgrades.
+
 Always test on a staging environment before using in production.
-
-
