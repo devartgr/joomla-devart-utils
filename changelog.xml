@@ -4,6 +4,38 @@
     <changelog>
         <element>pkg_devartutils</element>
         <type>package</type>
+        <version>1.2.10</version>
+
+        <new>
+            <item>Added visual section headers across DevArt Utils administrator pages.</item>
+            <item>Added Disclaimer / Limitation of Liability section in Settings.</item>
+            <item>Added optimized database index for cache rules matching.</item>
+        </new>
+
+        <change>
+            <item>Improved administrator UI consistency across Cache Rules, Diagnostics, Preview, Cloudflare and Settings pages.</item>
+            <item>Improved submenu page presentation and visual organization.</item>
+            <item>Optimized cache rules database access for future scalability.</item>
+            <item>Improved installer upgrade handling for existing Joomla installations.</item>
+            <item>Improved media asset handling inside package installation.</item>
+            <item>Improved compatibility across Plesk and Virtualmin environments.</item>
+        </change>
+
+        <performance>
+            <item>Added optimized database index for faster rules lookup performance.</item>
+            <item>Reduced overhead for future large rule sets and high-traffic environments.</item>
+            <item>Prepared groundwork for additional cache rule optimizations in future versions.</item>
+        </performance>
+
+        <security>
+            <item>Existing credential encryption and protection mechanisms remain active.</item>
+            <item>No new security vulnerabilities introduced.</item>
+        </security>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
         <version>1.2.9</version>
 
         <security>
