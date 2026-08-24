@@ -4,6 +4,72 @@
     <changelog>
         <element>pkg_devartutils</element>
         <type>package</type>
+        <version>1.3.0</version>
+
+        <addition>
+            <item>Added Cache admin submenu hub with Cache Rules, Cache Diagnostics and Cache Preview views</item>
+            <item>Added Cloudflare admin submenu hub with Clear Cache, Cloudflare Analytics and Cloudflare Rules views</item>
+            <item>Added read-only Cloudflare Page Rules and Firewall rules in administrator</item>
+            <item>Added Security Events and Security Center Insights to Cloudflare Analytics</item>
+            <item>Added automatic Vary response headers for multilingual sites and logged-in cache mode</item>
+            <item>Added Google Analytics admin expansion: 7-day, 28-day and Realtime overview views with refresh controls</item>
+            <item>Added full 15-locale language packs across the Utils suite and Administrator Tools extensions</item>
+            <item>Added Administrator Tools hub (com_devarttools) with Favicon Creator, Asset Table Repair, diagnostics and root text-file tools</item>
+            <item>Added Scheduled Tasks and console plugins for Asset Table Repair</item>
+            <item>Added Settings toolbar Back/Save/Save and Close, Administrator Tools settings header, and DevArt.gr footer links</item>
+            <item>Added missing Asset Repair ACL diagnostics language keys for JED Checker (15 locales)</item>
+        </addition>
+
+        <change>
+            <item>First public release since 1.2.10 (intermediate 1.2.11–1.2.46 builds were not published)</item>
+            <item>Migrated legacy Backend Tools into the DevArt Utils suite package (pkg_devartutils)</item>
+            <item>Nested Favicon Creator and Asset Table Repair under Administrator Tools; hid them from the Components menu</item>
+            <item>Restyled Cache, Cloudflare, GA and Tools hub cards to match DevArt Article Tools styling</item>
+            <item>Updated Dashboard and hub header images; Dashboard header shown at natural size</item>
+            <item>Reordered Cloudflare Clear Cache actions into separated blocks (site cache, specific URL, Purge Everything, Test Connection)</item>
+            <item>Cached enabled cache rules and component params in the frontend DevArt Cache plugin with invalidation on changes</item>
+            <item>GA Realtime top pages use unifiedScreenName; GA cache files scoped by property ID with clear-on-settings-change</item>
+            <item>GA 7-day and 28-day views support manual refresh and force cache bypass</item>
+            <item>JED pre-release hardening: manifest metadata, Joomla HttpFactory transport, filesystem API, install scripts, GPL headers</item>
+            <item>Package-only Joomla update architecture with root update.xml and changelog.xml (Slider/Widgets aligned)</item>
+            <item>PHP minimum aligned to 8.3.0; Joomla 6+ only</item>
+        </change>
+
+        <fix>
+            <item>Fixed Clean Cache toolbar plugin corrupting JSON badge responses (System dashboard red X icons)</item>
+            <item>Fixed GA 7-day and 28-day breakdown tables (Top Pages, Countries, Devices, Traffic Sources)</item>
+            <item>Fixed Settings tabs by loading Bootstrap tab assets; Settings accessed via Tools hub</item>
+            <item>Fixed admin hub styling by loading component CSS through WebAssetManager with correct weight</item>
+            <item>Fixed suite child component autoload manifests and dropped Backend Tools migration logic</item>
+            <item>Fixed uninstall data retention so keep_data_on_uninstall is honored by the installer script</item>
+            <item>Injected the Clean Cache toolbar script before the final closing body tag instead of replacing every body marker</item>
+            <item>Preserved original query-string order and encoding when stripping tracking parameters for URL rule matching</item>
+            <item>Reduced cache cleanup debug log exposure by logging relative cache paths instead of absolute filesystem paths</item>
+        </fix>
+
+        <security>
+            <item>Secured the GA Realtime AJAX refresh endpoint with administrator client check, CSRF token validation, and ACL enforcement</item>
+            <item>Hardened cache clean return URL handling to reject external open redirects</item>
+            <item>Secured cache rules export/import/delete/reorder with CSRF token validation and ACL checks</item>
+            <item>CSRF hardening: state-changing Rules and Settings actions now require POST token checks</item>
+            <item>Restricted Google Analytics OAuth token requests to the official Google HTTPS endpoint</item>
+            <item>Hardened filesystem cache cleanup to stay within allowed cache roots and skip symlink targets</item>
+            <item>Hardened debug response headers by stripping control characters from DevArt Cache diagnostic values</item>
+            <item>Restricted Settings save POST handling to an explicit field allowlist</item>
+            <item>Added devartutils.garealtime ACL action for granular GA Realtime access control</item>
+        </security>
+
+        <note>
+            <item>Public release replacing the previous public line at 1.2.10</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Safe update from DevArt Utils 1.2.x</item>
+            <item>Recommended update for all DevArt Utils installations</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
         <version>1.2.10</version>
 
         <new>
