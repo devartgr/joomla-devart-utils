@@ -4,6 +4,52 @@
     <changelog>
         <element>pkg_devartutils</element>
         <type>package</type>
+        <version>1.3.1</version>
+
+        <security>
+            <item>Legacy plaintext Cloudflare API tokens in component params are migrated into SecureStorage on update/read and cleared from the database.</item>
+            <item>SecureStorage now writes libsodium secretbox (or AES-256-GCM fallback) payloads and upgrades legacy AES-256-CBC secret files on read.</item>
+        </security>
+
+        <fix>
+            <item>Cloudflare URL purge now batches at most 30 files per API request and retries rate-limited (429 / error 1134) or 5xx purge responses with Retry-After or exponential backoff.</item>
+            <item>Auto clean on article save can also purge the article Cloudflare URL plus up to three configured extra URLs when Cloudflare is connected.</item>
+            <item>Newsroom auto-clean: publish/unpublish/delete also trigger Joomla scoped clean + Cloudflare purge of article, homepage and category URLs; editor-path Cloudflare purge uses one short attempt with no sleep retries; scheduled purge respects a wall-clock deadline.</item>
+            <item>Cache safety: preserve existing private/no-store directives; set CDN headers to private/no-store on no-store responses; detect form.token before GZIP onAfterRender; normalize empty CF logged-in cookie path to site-wide.</item>
+            <item>Cloudflare-CDN-Cache-Control now includes stale-while-revalidate and stale-if-error with edge max-age (no s-maxage), so Cloudflare edge can serve stale while Cache-Control remains browser-facing.</item>
+            <item>Cloudflare login-bypass docs and Settings help now also recommend bypassing on Joomla Remember Me cookies (`joomla_remember_me_`) so auto-login can reach origin after session cookies are dropped.</item>
+            <item>Replaced remaining Factory::getDbo() calls with DI container database resolution (Joomla 7 prep).</item>
+            <item>Auto clean on article save now shows an administrator message when content cache is cleared, and a warning if the Cloudflare URL purge attempt fails.</item>
+            <item>Cache correctness: form.token prefilter accepts spaced attributes; negative AfterRender scans are re-checked before respond; existing Vary tokens are preserved/merged; Vary:* forces no-store.</item>
+            <item>Newsroom purge: stores resolved absolute URLs before save/delete; state-aware homepage/category purge; optional include-home-category setting; content-clean throttle; article/previous/home/category URLs are never silently truncated (extras soft-capped; partial CF purge warned).</item>
+            <item>Form-token detection runs last on onAfterRender and re-scans size-capped GZIP bodies on onBeforeRespond when a later plugin injects a token form.</item>
+            <item>Documented required Cloudflare Cache Rules for login + HTML cache and the first-visit Set-Cookie cold-path limitation (T10).</item>
+            <item>Cloudflare purge respects a shared wall-clock deadline across zone lookup, batches and retries (including save-context).</item>
+            <item>Diagnostics warns when Cloudflare reports a shared edge HIT for a URL that should be private/no-store; Factory::getConfig replaced with application config access.</item>
+            <item>SecureStorage uses a per-install subdirectory (hash of JPATH_ROOT) and migrates owned legacy flat `.enc` files without deleting secrets belonging to other sites.</item>
+            <item>Cache headers now apply only to guest GET/HEAD HTML responses with HTTP 200.</item>
+            <item>Cache rules/params load failures now fail closed with no-store instead of public defaults.</item>
+            <item>Logged-in users always receive private no-store headers; Vary Cookie removed for Cloudflare safety.</item>
+            <item>Fixed Clean Cache toolbar confirm dialog breaking in French/Italian (apostrophe in JS string).</item>
+            <item>Enforced per-view ACL checks in com_devartutils DisplayController.</item>
+            <item>Hardened Clean Cache plugin params query for ANSI_QUOTES SQL modes.</item>
+            <item>Rules replace/append import now validates all rows first, then commits inside a database transaction with size and row limits.</item>
+            <item>Secure credential writes now use temp file + atomic rename.</item>
+            <item>Dashboard RSS and Diagnostics HTTP clients now verify TLS certificates; RSS responses are file-cached for about 8 hours.</item>
+            <item>Deep cache clean preserves Google Analytics cache files (com_devartutils_ga_*) and uses a simple lock against parallel full cleans.</item>
+            <item>Auto clean on article save now clears only content-related cache groups instead of wiping all groups.</item>
+            <item>Cloudflare zone ID is cached after Connect to avoid repeated zone lookup API calls.</item>
+            <item>Clean Cache toolbar actions now submit via POST forms; plugin params load through ComponentHelper.</item>
+            <item>Converted Clean Cache system plugin to namespaced SubscriberInterface with DI service provider (Joomla 6 hygiene).</item>
+            <item>Updated architecture documentation to match the current suite inventory.</item>
+            <item>Cloudflare Purge History keeps one row per URL and updates the timestamp on re-purge instead of duplicating entries.</item>
+            <item>Added scheduled Cloudflare URL purge via Joomla Scheduled Tasks (configurable URLs in Settings, unpublished 30-minute task by default).</item>
+        </fix>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
         <version>1.3.0</version>
 
         <addition>
