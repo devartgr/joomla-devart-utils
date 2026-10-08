@@ -12,6 +12,16 @@
 Product change history for bootstrapped repositories begins below this template
 section.
 
+## 1.3.3 — 2026-10-08
+
+### Improved
+
+- Auto clean on content save also covers DevArt Events, Business and Video (same Settings toggle): scoped Joomla cache clear + Cloudflare purge for item, listing, primary category and homepage on save / state / delete
+
+### Fixed
+
+- Auto-clean before-save/before-delete skip work when the setting is off; purge path no longer mutates the live content item; per-request cache-clean coalesce comments clarified (not cross-request throttle)
+
 ## 1.3.2 — 2026-10-08
 
 ### Fixed
