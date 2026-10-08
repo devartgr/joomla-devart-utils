@@ -3,7 +3,7 @@
 Joomla 6 administrator suite for cache control, Cloudflare integration, Google
 Analytics 4 dashboards, diagnostics, and built-in administrator tools.
 
-**Current product version:** 1.3.1 (`pkg_devartutils`)
+**Current product version:** 1.3.2 (`pkg_devartutils`)
 
 ## Purpose
 

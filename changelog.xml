@@ -4,6 +4,17 @@
     <changelog>
         <element>pkg_devartutils</element>
         <type>package</type>
+        <version>1.3.2</version>
+
+        <fix>
+            <item>Upgrade path now adds missing `#__devartutils_purge_log.user_id` (CREATE TABLE IF NOT EXISTS left older tables without the column).</item>
+            <item>Cloudflare purge success is no longer reported as failed when only purge-history INSERT fails; history schema is ensured at runtime with one retry.</item>
+        </fix>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
         <version>1.3.1</version>
 
         <security>

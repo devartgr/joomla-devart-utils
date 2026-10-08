@@ -12,6 +12,13 @@
 Product change history for bootstrapped repositories begins below this template
 section.
 
+## 1.3.2 — 2026-10-08
+
+### Fixed
+
+- Upgrade path adds missing `#__devartutils_purge_log.user_id` for sites that created the table before that column existed (`CREATE TABLE IF NOT EXISTS` never altered it)
+- Cloudflare host/URL purge success is no longer misreported as failure when only purge-history logging fails; schema is ensured at runtime with one retry
+
 ## 1.3.1 — 2026-10-07
 
 ### Security
