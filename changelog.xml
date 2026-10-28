@@ -4,6 +4,25 @@
     <changelog>
         <element>pkg_devartutils</element>
         <type>package</type>
+        <version>1.3.4</version>
+
+        <addition>
+            <item>Administrator module DevArt Shortcuts (mod_devartutils_shortcuts): allowlisted quickicon shortcuts to DevArt component screens; grayed when the target app is not installed; published on icon (Home quickicons) at install.</item>
+        </addition>
+
+        <fix>
+            <item>Empty DevArt Shortcuts button list no longer hides the module on Administrator Home (Atum well chrome); an empty-state hint is shown instead.</item>
+            <item>Saved shortcut buttons render on Home; nested subform rows from Joomla Registry (stdClass) are normalised instead of being skipped.</item>
+            <item>News/Slider/Widgets/RSS/Elements shortcuts open a specific Item ID edit screen instead of the list.</item>
+            <item>Comments shortcut shows a pending-approval badge, uses Home Notifications danger colouring when count is greater than zero, and opens the pending filter.</item>
+            <item>Shortcut administrator links avoid xhtml double-encoding so Home tiles open the intended Comments list / widget edit screens.</item>
+            <item>News shortcut uses icon-file-alt; pending Comments count uses core quickicon-amount sizing.</item>
+        </fix>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartutils</element>
+        <type>package</type>
         <version>1.3.3</version>
 
         <fix>

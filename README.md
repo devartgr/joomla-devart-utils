@@ -3,7 +3,7 @@
 Joomla 6 administrator suite for cache control, Cloudflare integration, Google
 Analytics 4 dashboards, diagnostics, and built-in administrator tools.
 
-**Current product version:** 1.3.3 (`pkg_devartutils`)
+**Current product version:** 1.3.4 (`pkg_devartutils`)
 
 ## Purpose
 
@@ -13,6 +13,7 @@ DevArt Utils is the original DevArt Joomla extension. The suite package provides
 - `com_devarttools` — Administrator Tools hub (diagnostics, root text files)
 - `com_devartfavicon` — Favicon Creator (accessed via Tools)
 - `com_devartassetrepair` — Asset Table Repair (accessed via Tools)
+- `mod_devartutils_shortcuts` — Administrator Home shortcuts (quickicons on `icon`)
 - `plg_system_devartcache` — frontend cache header control
 - `plg_system_devartcleancache` — administrator toolbar cache purge
 - `plg_task_devartassetrepair` — Scheduled Tasks integration
